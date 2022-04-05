@@ -38,6 +38,11 @@ th{
     background-color: tomato;
 }
 
+.select{
+    display: flex;
+    justify-content: center;
+}
+
 .modal h3{
     color: white;
 }

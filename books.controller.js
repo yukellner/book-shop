@@ -2,12 +2,16 @@ var gBooks = []
 var gId = 0
 
 
+$(init)
+
 function init(){
     createBooks()
     renderBooks()
 }
 
 function renderBooks(){
+
+
 
     var elTable = document.querySelector('table')
     elTable.innerHTML = ''
@@ -89,5 +93,16 @@ function btnCloseModal(){
 
 
 }
+
+function onChangeLang(value){
+
+    if(value === 'English') var lang = 'en'
+    else var lang = 'he'
+    getlang(lang)
+
+    doTranslate(lang)
+
+}
+
 
 

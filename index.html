@@ -10,18 +10,25 @@
 
     <title>Document</title>
 </head>
-<body onload="init()">
+<body>
     <div class="modal">
             
     </div>
 
     <header style="text-align: center;">
-        <h1>welcome to my bookshop!</h1>
+        <h1 data-trans="mTitle" >welcome to my bookshop!</h1>
 
     </header>
+    <div class="select">
+        <select onchange="onChangeLang(this.value)">
+            <option date-lang="he" >Hebrew</option>
+            <option date-lang="en" >English</option>
+
+        </select>
+    </div>
 
     <sction name="section">
-        <button onclick="onAddBook()">add a new book</button>
+        <button data-trans="addBtn"  onclick="onAddBook()">add a new book</button>
         <table name="table">
 
         </table>
@@ -33,9 +40,11 @@
     
     
 
+    <script src="jquery.js" ></script>
     <script src="books.controller.js"></script>
     <script src="books.service.js"></script>
     <script src="books.storage.js"></script>
+    <script src="book-i18n-service" ></script>
 
 
 

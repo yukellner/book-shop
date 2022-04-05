@@ -1,0 +1,45 @@
+var curLang = 'en'
+
+var gTrans = {
+    mTitle: {
+        en: 'welcome to my bookshop!',
+        he: 'ברוך הבא לחנות הספרים'
+        
+    },
+    addBtn:{
+        en: 'add a new book',
+        he: 'הוסף עוד ספר'
+    }
+}
+
+function getlang(elang){
+    curLang = elang
+    return curLang
+}
+
+function doTranslate(lang){
+
+    var dTranses = document.querySelectorAll('[data-trans]')
+
+    dTranses.forEach(trans => {
+        var key = trans.dataset.trans
+        const translated = gettranslate(key)
+
+        console.log('key',key)
+        
+        trans.innerText = translated
+        
+        
+        
+        
+    });
+    
+}
+
+
+function gettranslate(key){
+    var translated = gTrans[key]
+    // console.log('translated',translated[curLang])
+    
+    return translated[curLang]
+}
