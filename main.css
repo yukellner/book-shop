@@ -8,6 +8,10 @@ td{
     padding: 10px;
 }
 
+.rtl{
+    direction: rtl;
+}
+
 .modal{
     background-color: rgb(185, 13, 13) ;
     width: 200px;
@@ -38,9 +42,14 @@ th{
     background-color: tomato;
 }
 
-.select{
+.div-select{
     display: flex;
     justify-content: center;
+    /* width: 10%; */
+}
+
+.my-select{
+    width: 10%;
 }
 
 .modal h3{

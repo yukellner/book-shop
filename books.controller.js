@@ -16,14 +16,19 @@ function renderBooks(){
     var elTable = document.querySelector('table')
     elTable.innerHTML = ''
 
-    elTable.innerHTML += `<tr><th>id</th><th>name</th><th>price</th><th>rate</th><th colspan="3">action</th></tr>`
+    elTable.innerHTML += `
+    <thead class="thead-dark">
+    <tr>
+    <th  data-trans="id">id</th><th data-trans="bookName">name</th><th data-trans="price">price</th><th data-trans="rank">rate</th><th data-trans="action" colspan="3">action</th>
+    </tr>
+    </thead>`
 
     gBooks.forEach(book => {
         elTable.innerHTML += 
         `<tr><td>${book.id}</td><td>${book.tittle}</td><td>${book.price}$<td>${book.rate}</td>
-        <td><button name="${book.tittle}" type="read" onclick="onClicked(this)" class="btn-read">Read</button></td>
-        <td><button name="${book.tittle}" type="upgrade" onclick="onClicked(this)" class="btn-upgrade">Upgrade</button></td>
-        <td><button name="${book.tittle}" type="delete" onclick="onClicked(this)" class="btn-delete">Delete</button></td>
+        <td><button data-trans="btnRead" name="${book.tittle}" type="read" onclick="onClicked(this)" class="btn btn-primary">Read</button></td>
+        <td><button data-trans="btnUpgared" name="${book.tittle}" type="upgrade" onclick="onClicked(this)" class="btn btn-warning">Upgrade</button></td>
+        <td><button data-trans="btnDelete" name="${book.tittle}" type="delete" onclick="onClicked(this)" class="btn btn-danger">Delete</button></td>
         </tr>`
         
     });
@@ -96,11 +101,21 @@ function btnCloseModal(){
 
 function onChangeLang(value){
 
-    if(value === 'English') var lang = 'en'
-    else var lang = 'he'
+    if(value === 'English') {
+        var lang = 'en'
+        document.body.classList.remove('rtl')
+
+    }
+    else {
+        var lang = 'he'
+        document.body.classList.add('rtl')
+
+    }
     getlang(lang)
 
     doTranslate(lang)
+
+    
 
 }
 

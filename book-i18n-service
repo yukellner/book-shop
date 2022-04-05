@@ -9,7 +9,47 @@ var gTrans = {
     addBtn:{
         en: 'add a new book',
         he: 'הוסף עוד ספר'
+    },
+    id:{
+        en: 'id',
+        he: 'מסד'
+
+    },
+    bookName:{
+        en: 'name',
+        he: 'שם'
+
+    },
+    price:{
+        en: 'price',
+        he: 'מחיר'
+
+    },
+    rank:{
+        en: 'rank',
+        he: 'דירוג'
+
+    },
+    action:{
+        en: 'action',
+        he: 'פעולה'
+    },
+    btnRead:{
+        en: 'read',
+        he: 'קרא'
+
+    },
+    btnDelete:{
+        en: 'delete',
+        he: 'מחק'
+        
+    },
+    btnUpgared:{
+        en: 'upgrade',
+        he: 'עדכן'
+        
     }
+
 }
 
 function getlang(elang){
