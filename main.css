@@ -1,0 +1,56 @@
+table, tr, td{
+    margin: 0 auto;
+    border: 1px solid black;
+    text-align: center;
+}
+
+td{
+    padding: 10px;
+}
+
+.modal{
+    background-color: rgb(185, 13, 13) ;
+    width: 200px;
+    height: 600px;
+    left: 150%;
+    display: block;
+    position: absolute;
+    text-align: center;
+    
+}
+
+
+
+.btn-read{
+    background-color:cornflowerblue;
+}
+
+.btn-delete{
+    background-color: rgb(238, 53, 21);
+    color: aliceblue;
+}
+
+.btn-upgrade{
+    background-color:coral;
+}
+
+th{
+    background-color: tomato;
+}
+
+.modal h3{
+    color: white;
+}
+
+.modal.open{
+
+    left: 80%;
+    transition: left .5s;
+
+
+}
+
+body{
+    overflow-x: hidden;
+}
+
